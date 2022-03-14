@@ -8,7 +8,7 @@ It consists of two parts:
 
 
 ## cassandra-ecaudit-docker
-Either build Dockerimage by your own after checkout or use already published image on [dockerhub-cassandra-ecaudit-docker](https://hub.docker.com/r/dsx0/cassandra-ecaudit-docker).
+Either build Dockerimage by your own after checkout or use **already published image** on [dockerhub-cassandra-ecaudit-docker](https://hub.docker.com/r/dsx0/cassandra-ecaudit-docker).
 
 ### docker commands
 ```
