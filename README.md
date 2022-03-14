@@ -26,7 +26,7 @@ docker exec -it <containerhash> /bin/bash
   tail -f /opt/cassandra/logs/system.log
   cat /opt/cassandra/logs/audit/audit.log
 ```
-You can use <containerhash> to stop and start cassandra:
+You can use the containerhash to stop and start cassandra:
 ```
 docker stop <containerhash>
 docker start <containerhash>
