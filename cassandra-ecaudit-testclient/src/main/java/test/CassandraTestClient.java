@@ -17,23 +17,6 @@ import test.init.CassandraInit;
 
 public class CassandraTestClient {
 
-	// docker run --name some-cassandra -p 9042:9042 -d cassandra:3.11.12
-	// new
-	// build:
-	// docker build --tag=cassandra-ecaudit-docker:v1 .
-	// run:
-	// docker run --name some-cassandra -p 9042:9042 -p 1414:1414 -d cassandra-ecaudit-docker:v1 -d
-	// docker ps -a
-	// docker exec -it <containerhash> /bin/bash
-	// - tail -f /opt/cassandra/logs/system.log
-	// - cat /opt/cassandra/logs/audit/audit.log
-	// docker stop <containerhash>
-	// docker start <containerhash>
-	// docker exec -it a794640098a9 /bin/bash
-	// - tail -f /opt/cassandra/logs/system.log
-	// docker stop <containerhash>
-	// docker run -it cassandra-ecaudit-docker:v1 /bin/bash
-	
 	private void testCassandra() {
 		try {
 			Session session = CassandraInit.init();
