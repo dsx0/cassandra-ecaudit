@@ -8,7 +8,24 @@ It consists of two parts:
 
 
 ## cassandra-ecaudit-docker
-Either build Dockerimage by your own after checkout or use already published image on [dockerhub-cassandra-ecaudit-docker](https://hub.docker.com/r/dsx0/cassandra-ecaudit-docker)
+Either build Dockerimage by your own after checkout or use already published image on [dockerhub-cassandra-ecaudit-docker](https://hub.docker.com/r/dsx0/cassandra-ecaudit-docker).
 
+### docker commands
+```
+docker pull dsx0/cassandra-ecaudit-docker:v1
+docker run --name some-cassandra -p 9042:9042 -p 1414:1414 -d  dsx0/cassandra-ecaudit-docker:v1 -d 
+```
+This will start cassandra(with ecaudit) and opens 2 ports for connecting:
+- 9042 (the standard port for java client-connections)
+- 1414 (a java remote debugging port. you can debug cassandra with it)
 
 ## cassandra-ecaudit-testclient
+Is a simple maven based java-project containing the testclass "CassandraTestClient".
+
+- It automatically connects to localhost:9042 and creates a "persons" keyspace (if not exists) with testdata
+- It executes selects with different types:
+  - Test manual statement (Simple query)
+  - Test manual PreparedStatement (Query with PreparedStatement)
+  - Test MappingManager with Mapper (Using Cassandra MappingManager with a mapper)
+  - Test MappingManager with Accessor (Using Cassandra MappingManager with an accessor)
+
