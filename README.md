@@ -19,6 +19,19 @@ This will start cassandra(with ecaudit) and opens 2 ports for connecting:
 - 9042 (the standard port for java client-connections)
 - 1414 (a java remote debugging port. you can debug cassandra with it)
 
+To check logs:
+```
+docker ps -a
+docker exec -it <containerhash> /bin/bash
+  tail -f /opt/cassandra/logs/system.log
+  cat /opt/cassandra/logs/audit/audit.log
+```
+You can use <containerhash> to stop and start cassandra:
+```
+docker stop <containerhash>
+docker start <containerhash>
+```
+
 ## cassandra-ecaudit-testclient
 Is a simple maven based java-project containing the testclass "CassandraTestClient".
 Source: [CassandraTestClient](https://github.com/dsx0/cassandra-ecaudit/blob/main/cassandra-ecaudit-testclient/src/main/java/test/CassandraTestClient.java)
