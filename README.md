@@ -21,6 +21,7 @@ This will start cassandra(with ecaudit) and opens 2 ports for connecting:
 
 ## cassandra-ecaudit-testclient
 Is a simple maven based java-project containing the testclass "CassandraTestClient".
+Source: [CassandraTestClient](https://github.com/dsx0/cassandra-ecaudit/blob/main/cassandra-ecaudit-testclient/src/main/java/test/CassandraTestClient.java)
 
 - It automatically connects to localhost:9042 and creates a "persons" keyspace (if not exists) with testdata
 - It executes selects with different types:
