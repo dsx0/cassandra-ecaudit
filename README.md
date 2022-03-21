@@ -43,7 +43,7 @@ docker start <containerhash>
 Build Dockerimage by your own after checkout.
 ### docker commands
 ```
-docker build --build-arg ECAUDIT_FILE=ecaudit_c3.11-2.10.0-SNAPSHOT-emolsson-issue-193.jar --tag=cassandra-ecaudit-docker-local-ecaudit-build:v3.11.12 .
+docker build --build-arg ECAUDIT_JAR_FILE=ecaudit_c3.11-2.10.0-SNAPSHOT-emolsson-issue-193.jar --tag=cassandra-ecaudit-docker-local-ecaudit-build:v3.11.12 .
 docker run --name some-cassandra -p 9042:9042 -p 1414:1414 -d cassandra-ecaudit-docker-local-ecaudit-build:v3.11.12
 ```
 To check **logs**:
