@@ -13,8 +13,13 @@ Either build Dockerimage by your own after checkout or use **already published i
 
 ### docker commands
 ```
-docker pull dsx0/cassandra-ecaudit-docker:v1
-docker run --name some-cassandra -p 9042:9042 -p 1414:1414 -d dsx0/cassandra-ecaudit-docker:v1
+docker build --tag=cassandra-ecaudit-docker:v3.11.12 .
+docker run --name some-cassandra -p 9042:9042 -p 1414:1414 -d cassandra-ecaudit-docker:v3.11.12
+```
+or
+```
+docker pull dsx0/cassandra-ecaudit-docker:v3.11.12
+docker run --name some-cassandra -p 9042:9042 -p 1414:1414 -d dsx0/cassandra-ecaudit-docker:v3.11.12
 ```
 This will start cassandra(with ecaudit) and opens 2 ports for connecting:
 - **9042** (the standard port for java client-connections)
